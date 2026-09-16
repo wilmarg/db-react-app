@@ -9,11 +9,10 @@ const LoginRouter = () => {
   return (
     
     <Router>
+        <AppRouter/>
         <Switch>
             <Route exact path = "/login" component={LoginScreen}/>
         </Switch>
-
-        <AppRouter/>
     </Router>
     
   );
