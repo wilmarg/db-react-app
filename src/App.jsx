@@ -1,11 +1,13 @@
 import React from 'react'
+import LoginRouter from './routes/LoginRouter'
 
 
 const App = () => {
 
   return (
     <>
-      <h1>DB - React - App</h1>
+      <LoginRouter/>
+      
     </>
   )
 }
