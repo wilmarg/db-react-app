@@ -1,8 +1,15 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
+//import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 const Navbar = () => {
+
+    const history = useHistory(); 
+
+    const handleLogout = () =>{
+        history.replace("/login");
+    };
 
   return (
     <>
@@ -21,7 +28,7 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon" />
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <NavLink 
                             activeClassName="active text-white" 
@@ -50,6 +57,9 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                     </ul>
+                    <div className='d-flex'>
+                        <button className='btn btn-danger' onClick={handleLogout}>Logout</button>
+                    </div>
                 </div>
             </div>
         </nav>
