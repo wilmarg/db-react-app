@@ -7,8 +7,6 @@ const MenScreen = () => {
 
   const Men = Characters.filter(character => character.type === "h");
 
-  console.log(Men);
-
   return (
     <>
       <div className='container mt-3'>

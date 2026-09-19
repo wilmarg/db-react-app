@@ -14,7 +14,7 @@ export const Characters = [
   {
     id: "goku",
     name: "Goku",
-    description: "Protagonista de DB",
+    description: "Protagonista de Dragon Ball",
     type: "h",
   },
   {
@@ -33,7 +33,7 @@ export const Characters = [
   {
     id: "piccolo",
     name: "Piccolo",
-    description: "Enemigo y despues amigo de Goku",
+    description: "Enemigo y después amigo de Goku",
     type: "h",
   },
   {
