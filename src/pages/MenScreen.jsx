@@ -17,8 +17,6 @@ const MenScreen = () => {
           Men.map((men) => (< Card key={men.id} {...men} />))
           }
         </div>
-        
-
       </div>   
           
     </>
