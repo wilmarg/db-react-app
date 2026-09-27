@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom'; //la importacion del UseHistory es nueva con ayuda de Gemini
 import queryString from 'query-string';
 import { Characters } from '../models/Characters';
 import Card from '../components/Card';
 
 
-const SearchScreen = ({history}) => {
+//const SearchScreen = ({history}) => {
+  const SearchScreen = () => { //esta linea es nueva con ayuda de Gemini
 
   const location = useLocation();
+
+  const history = useHistory(); //esta linea es nueva con ayuda de Gemini
 
   const { q = "" } = queryString.parse(location.search);
 
@@ -20,14 +23,14 @@ const SearchScreen = ({history}) => {
     setInputValue(value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     history.push(`?q=${inputValue}`);
   };
 
   const getCharacters = () => {
-    if (inputValue.trim() != ""){
+    if (q.trim() != ""){   //voy a cambiar inputValue x q
       const value = inputValue.toLocaleLowerCase();
 
       const newValue = Characters.filter((character) => 

@@ -7,11 +7,12 @@ import AppRouter from './AppRouter';
 const LoginRouter = () => {
 
   return (
-    
+    //en el codigo original el <AppRouter/> lo tengo justo debajo del <Router> 
     <Router>
-        <AppRouter/>
+        
         <Switch>
             <Route exact path = "/login" component={LoginScreen}/>
+            <Route path = "/" component={AppRouter}/>
         </Switch>
     </Router>
     
