@@ -21,7 +21,7 @@ const AppRouter = () => {
 
             <Route exact path = "/character/:id" component={CharacterScreen}/>
 
-            <Redirect to="/login"/>
+            <Redirect to="/men"/>
         </Switch>
     </>
     
